@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events page</title>
+  <style>
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: #3d3737;
+      background: #ffffff;
+    }
+
+    .tagline {
+      color: #4e4e4e;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #0b319a;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      z-index: 100;
+      background: #ffffff;
+      padding: 8px 16px;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header>
+    <img src="Images/LOGO.png" alt="Maplebrook Public Library Logo">
+
+    <!-- Main Navigation -->
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="Registering.html">Registering</a>
+      <a href="News.html">News</a>
+      <a href="Researches.html">Research</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Events.html">Events</a>
+    </nav>
+    <search>
+      <form method="get" action="search_results.html">
+        <input type="text" name="query" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+    </search>
+    <hr>
+  </header>
+
+  <!-- main content -->
+  <main id="main">
+    <section>
+      <h1>Events at Maplebrook Public Library</h1>
+      <p>Join us for a variety of events and programs at the Maplebrook Public Library. From book clubs to workshops,
+        there's something for everyone!</p>
+      <br>
+      <a href="https://www.maplebrooklibrary.ca/events">View all events</a>
+    </section>
+    <hr>
+    <section class="event-list">
+      <h2>Upcoming Events</h2>
+      <article>
+        <h3>Children's Storytime</h3>
+        <p>Every Wednesday at 10:00 AM, join us for a fun and interactive storytime session for children ages 3-7.</p>
+        <br>
+        <a href="https://www.maplebrooklibrary.ca/events/childrens-storytime">Event Details</a>
+      </article>
+      <article>
+        <h3>Adult Book Club</h3>
+        <p>Join our monthly book club for adults. This month's book is "The Great Gatsby" by F. Scott Fitzgerald.</p>
+        <br>
+        <a href="https://www.maplebrooklibrary.ca/events/adult-book-club">Event Details</a>
+      </article>
+      <article>
+        <h3>Author Meet and Greet</h3>
+        <p>Meet local authors and get your books signed! This event will take place on the first Saturday of every
+          month.</p>
+        <br>
+        <a href="https://www.maplebrooklibrary.ca/events/author-meet-and-greet">Event Details</a>
+      </article>
+    </section>
+
+    <hr>
+    <section class="event-registration">
+      <h2>Book a Meeting Room</h2>
+      <p>Need a space for your next meeting or event? Our library offers meeting rooms that can be booked in advance.
+      </p>
+      <br>
+      <form action="book_meeting_room.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+    <hr>
+  </main>
+
+  <!-- main footer -->
+  <footer aria-label="Footer">
+    <h3>Maplebrook Library</h3>
+    <a href="About-us.html">About us</a>
+    <a href="Contact-us.html">Contact us</a>
+    <a href="FAQ.html">FAQs</a>
+    <a href="Events.html">Meeting Rooms</a>
+    <a href="Registering.html">Opening Hours</a>
+    <p>Copy Rights/2026</p>
+  </footer>
+</body>
+
+</html>
